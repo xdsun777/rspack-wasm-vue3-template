@@ -1,6 +1,9 @@
 /target
 .swc/
 .idea
+.vscode
+
+# See https://help.github.com/articles/ignoring-files/
 # Logs
 logs
 *.log

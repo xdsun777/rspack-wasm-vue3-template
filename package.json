@@ -21,8 +21,7 @@
     "dev:serve": "rspack serve --mode=development --config=./config/rspack.dev.config.mjs",
     "dev:build": "rspack build --mode=development --config=./config/rspack.dev.config.mjs",
     "prod:serve": "rspack serve --mode=production --config=./config/rspack.prod.config.mjs",
-    "prod:build": "wasm-pack build --target web --out-dir pkg --release && set RSDOCTOR=true && set RSPACK_PROFILE=ALL && rspack build --mode=production --config=./config/rspack.prod.config.mjs",
-    "publish": "cd ./pkg && npm publish --access public"
+    "prod:build": "wasm-pack build --target web --out-dir pkg --release && set RSDOCTOR=true && set RSPACK_PROFILE=ALL && rspack build --mode=production --config=./config/rspack.prod.config.mjs"
   },
   "devDependencies": {
     "@rspack/cli": "^1.3.4",
