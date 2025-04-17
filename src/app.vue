@@ -1,22 +1,19 @@
 <template>
     <div id="app">
         <button @click="count++">{{ count }}</button>
-        <img src="@assets/navbar-logo-dark.png" alt="rspack logo" width="200" height="200" />
+        <img alt="rspack logo" height="200" src="@assets/navbar-logo-dark.png" width="200" />
     </div>
 </template>
 
 <script>
 
-import wasm from '@wasm-pkg/rust_rspack_template'
+import rs_wasm  from '@wasm-pkg/rs_wasm';
 
-wasm().then((wasm) => {
-    // console.log(wasm.add(BigInt(1.0), BigInt(2.2))) // 3
-    console.log(wasm.add(1, 2)) // 3.2;
-    
-    }
-).catch((err) => {
-    console.error('wasm load error', err)
-})
+rs_wasm().then((wasm)=>{
+  console.log(wasm.add(1,5))
+}).catch(console.error)
+
+
 export default {
     data() {
         return {

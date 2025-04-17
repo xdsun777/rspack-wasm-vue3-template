@@ -1,14 +1,15 @@
+mod rsapi;
+
 use wasm_bindgen::prelude::*;
-pub mod rsapi;
 
 #[wasm_bindgen]
-extern "C" {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn add(left: f64, right: f64) -> f64 {
+pub fn add(left: i32, right: i32) -> i32 {
     left + right
-
 }
 
+
+#[wasm_bindgen(start)]
+fn run() {
+    rsapi::utils::rs_log(rsapi::utils::LogValue::Str("Hello from Rust!".to_string()));
+
+}

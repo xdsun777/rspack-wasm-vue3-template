@@ -1,8 +1,6 @@
-use rust_rspack_template::rsapi::api::api;
+use rust_rspack_template::add;
 
 #[test]
-pub fn test() {
-    api::requests()
+fn test() {
+    assert_eq!(add(1, 2), 3);
 }
-
-
