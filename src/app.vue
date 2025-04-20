@@ -10,7 +10,8 @@
 import rs_wasm  from '@wasm-pkg/rs_wasm';
 
 rs_wasm().then((wasm)=>{
-  console.log(wasm.add(1,5))
+    console.log(wasm.add(1, 5))
+  
 }).catch(console.error)
 
 
